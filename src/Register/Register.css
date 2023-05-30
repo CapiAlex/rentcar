@@ -1,0 +1,11 @@
+.renting-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4386bf;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
