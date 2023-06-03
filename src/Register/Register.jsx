@@ -11,6 +11,7 @@ export function Register() {
     role: "",
     keyword: "",
     status:"",
+    password: "", // Nuevo campo de contraseña
   });
 
   const handleChange = (e) => {
@@ -25,7 +26,8 @@ export function Register() {
       dataUser.name === "" ||
       dataUser.username === "" ||
       dataUser.role === "" ||
-      dataUser.keyword === ""
+      dataUser.keyword === "" ||
+      dataUser.password === "" // Validar contraseña
     ) {
       setIsError(true);
       setMessage("All fields are mandatory");
@@ -46,6 +48,7 @@ export function Register() {
               role: dataUser.role,
               keyword: dataUser.keyword,
               status: "No",
+              password: dataUser.password, // Guardar contraseña
             })
             .then(() => {
               setMessage("User registered successfully");
@@ -57,6 +60,7 @@ export function Register() {
                 username: "",
                 role: "",
                 keyword: "",
+                password: "", // Limpiar campo de contraseña después del registro
               });
             })
             .catch((error) => {
@@ -131,6 +135,21 @@ export function Register() {
             placeholder="Keyword"
             required
             value={dataUser.keyword}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">
+            Password:
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+            value={dataUser.password}
             onChange={handleChange}
           />
         </div>
