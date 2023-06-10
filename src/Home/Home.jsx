@@ -15,7 +15,7 @@ export function Home() {
         <Link to="/Return" className="btn btn-primary btn-large">
           Go to Return
         </Link>
-        {userRole === "Admin" && (
+        {userRole === "admin" && (
           <Link to="/Addcar" className="btn btn-primary btn-large">
             Go to Add a car
           </Link>

@@ -10,7 +10,7 @@ export function Register() {
     username: "",
     role: "",
     keyword: "",
-    status:"",
+    status: "",
     password: "", // Nuevo campo de contraseña
   });
 
@@ -112,16 +112,17 @@ export function Register() {
           <label htmlFor="role" className="form-label">
             Role:
           </label>
-          <input
-            type="text"
+          <select
             className="form-control"
             id="role"
             name="role"
-            placeholder="Role"
             required
             value={dataUser.role}
             onChange={handleChange}
-          />
+          >
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+          </select>
         </div>
         <div className="mb-3">
           <label htmlFor="keyword" className="form-label">
